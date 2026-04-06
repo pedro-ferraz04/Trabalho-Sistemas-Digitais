@@ -5,11 +5,10 @@ module full_adder (
     output logic sum,
     output logic cout
 );
-    // Soma: A XOR B XOR Cin
+    
     assign sum = a ^ b ^ cin; 
     
-    // Carry-out: (A AND B) OR (Cin AND (A XOR B))
+
     assign cout = (a & b) | (cin & (a ^ b));
 endmodule
 
-/*Recebe dois bits e um carry-in e calcula a soma e o novo carry-out com XOR, AND e OR */
