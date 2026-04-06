@@ -28,12 +28,12 @@ module tb;
         // Reset do Sistema 
         #15 rst_n = 1;
 
-        // TESTE 1: Todos os sensores com pressão zero [cite: 49]
+        // TESTE 1:
         peb=0; pec=0; pdb=0; pdc=0;
         @(posedge clk); // Espera o hardware processar
         $display("Teste 1: Peso=%d kg (Esperado: 0)", peso_total);
 
-        // TESTE 2: Pressão máxima (255 em todos) 
+        // TESTE 2:  
 
         peb=255; pec=255; pdb=255; pdc=255;
         @(posedge clk);
