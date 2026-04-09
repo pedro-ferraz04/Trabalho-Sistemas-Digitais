@@ -1,5 +1,11 @@
 # Trabalho T1: Cama Inteligente – Sistemas Digitais 🛏️
 
+Integrantes:
+Lucas Machado
+Maria Eduarda da Luz
+Maurício Duarte Paliosa
+Pedro Henrique Duarte Ferraz
+
 Este é um projeto desenvolvido em **SystemVerilog** para a disciplina de Sistemas Digitais que automatiza o cálculo de peso através de sensores de pressão.
 
 ## 📋 Regras de Cálculo
@@ -30,8 +36,3 @@ Para rodar o projeto e os testes de cobertura, utilize o script fornecido no con
 ```tcl
 do sim.do
 
-Integrantes:
-Lucas Machado
-Maria Eduarda da Luz
-Maurício Duarte Paliosa
-Pedro Henrique Duarte Ferraz
