@@ -1,38 +1,24 @@
-# Trabalho T1: Cama Inteligente – Sistemas Digitais 🛏️
+# Projeto Cama Inteligente
 
-Integrantes:
-Lucas Machado,
-Maria Eduarda da Luz,
-Maurício Duarte Paliosa e
-Pedro Henrique Duarte Ferraz
+Este projeto calcula o peso de uma pessoa em uma cama usando 4 sensores. [cite_start]Ele soma os valores, tira o peso da cama e mostra o resultado em quilos [cite: 24-33].
 
-Este é um projeto desenvolvido em **SystemVerilog** para a disciplina de Sistemas Digitais que automatiza o cálculo de peso através de sensores de pressão.
+## Arquivos Necessarios
 
-## 📋 Regras de Cálculo
+Para tudo funcionar, coloque estes arquivos na mesma pasta:
+* full_adder.sv
+* adder_10bit.sv
+* cama_inteligente.sv
+* tb.sv
+* sim.do
 
-O sistema aplica o processamento sobre os valores dos **sensores de 8 bits** seguindo estes critérios:
+## Como rodar (Passo a Passo)
 
-### 1. Soma dos Sensores
-* **Hardware:** Quatro sensores de pressão: peb, pec, pdb e pdc.
-* **ALU Customizada:** Soma realizada através de módulos `full_adder` e `adder_8bit`.
+1. Abra o programa QuestaSim ou ModelSim.
+2. Clique em File > Change Directory e escolha a pasta onde estao os arquivos.
+3. Na parte de baixo do programa (janela Transcript), escreva o comando abaixo e aperte Enter:
+   do sim.do
 
-### 2. Conversão para Quilogramas (kg)
-A regra de peso varia conforme a unidade de pressão:
-* **Relação:** 1 unidade de pressão corresponde a 0.5 kg.
-* **Processamento:** O peso total deve ser a soma dos pesos calculados a partir dos quatro sensores.
+## Como ver os resultados
 
-### 3. Ajuste de Escala
-* **Divisão Binária:** Realizada via deslocamento para a direita (`>> 1`) para otimização de hardware.
-* **Precisão:** O bit de carry final é concatenado para garantir que não haja perda de dados no cálculo.
-
-## 🛠️ Tecnologias
-* **Linguagem:** SystemVerilog
-* **Compilador sugerido:** Questa / ModelSim
-
-## 🚀 Como Executar
-
-### 1. Compilação e Simulação
-Para rodar o projeto e os testes de cobertura, utilize o script fornecido no console do Questa:
-```tcl
-do sim.do
-
+* Ondas Verdes: Vai abrir uma janela mostrando os desenhos das ondas. [cite_start]Elas mostram o peso sendo calculado [cite: 1-2].
+* Relatorio: O programa cria uma pasta chamada coverage_report. Entre nela e abra o arquivo index.html no seu navegador. Se estiver tudo verde, o trabalho esta certo.
