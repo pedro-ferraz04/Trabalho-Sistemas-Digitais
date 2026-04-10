@@ -39,15 +39,16 @@ module cama_inteligente (
         .cout(carry_final)
     );
 
-    assign soma_liquida = soma_completa - 10'd100;
+    assign soma_tarada = soma_completa - 10'd100;
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            peso_total <= 9'h00; // Reset
+            //soma_tarada <= 9'h00; // Reset
+            //peso_total <= 9'h00; // Reset
         end else if(soma_completa < 10'd100) begin
         peso_total <= 9'd0;
         end else begin
-            peso_total <= soma_liquida >> 1;
+            peso_total <= soma_tarada  >> 1;
         end
     end
 
