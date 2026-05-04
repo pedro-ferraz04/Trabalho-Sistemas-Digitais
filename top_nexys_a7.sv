@@ -12,18 +12,26 @@ module top_nexys_a7 #()(
     output logic[7:0] AN    //  
 );
 
-logic io, op;
+// logic io, op;
 logic[5:0] d1, d2, d3, d4, d5, d6, d7, d8;
 
-// instanciação de um shifter de 16 bits
-bshifter16 shifter_a(
-    .clock(clock), .reset(~reset),
-    .val(SW), 
-    .ssl(op), 
-    .i(io), 
-    .res(LED), 
-    .o(io)
-);
+
+// // instanciação de um shifter de 16 bits
+// // bshifter16 shifter_a(
+// //     .clock(clock), .reset(~reset),
+// //     .val(SW), 
+// //     .ssl(op), 
+// //     .i(io), 
+// //     .res(LED), 
+// //     .o(io)
+// // );
+// adder4 adder(
+//   ..
+//   ..
+//   ..
+//   ..
+
+// )
 
 dspl_drv_NexysA7 display(
   .clock(clock), .reset(reset),
