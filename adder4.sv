@@ -1,14 +1,14 @@
 module adder4(
-input logic SW[0],
-input logic SW[1],
+input logic sw_a,
+input logic sw_b,
 
-output logic LED[0],
-output logic LED[1],
-output logic LED[2]
+output logic led_a,
+  output logic led_b,
+output logic led_c
 );
 
-assign LED[0] = SW[0];
-assign LED[1] = SW[1];
-assign LED[2] = SW[0] | SW[1];
+assign led_a = sw_a;
+assign led_b = sw_b;
+assign led_c = sw_a | sw_b;
 
 endmodule
