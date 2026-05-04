@@ -3,7 +3,7 @@ input logic sw_a,
 input logic sw_b,
 
 output logic led_a,
-  output logic led_b,
+output logic led_b,
 output logic led_c
 );
 
